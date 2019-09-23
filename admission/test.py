@@ -1,6 +1,7 @@
-import pandas as pd
+import pickle
 
-model = pd.read_pickle('DTR_model.pickle')
+f = open('DTR_model.pickle','rb')
+model = pickle.load(f)
 
 gre = int(input("Enter GRE   : "))
 tof = int(input("Enter Toefl : "))
